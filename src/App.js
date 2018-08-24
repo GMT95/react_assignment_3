@@ -6,14 +6,25 @@ class App extends Component {
     super();
 
     this.state = {
-      text: "Hello World"
+      text: "Hello World",
+      condition: true
     }
   }
 
   toggleState() {
-    this.setState({
-      text: "Hello Pakistan"
-    })
+    if(this.state.condition) {
+      this.setState({
+        text: "Hello Pakistan",
+        condition: false
+      })
+    } else {
+      this.setState({
+        text: "Hello World",
+        condition: true
+      })
+    }
+
+    
   }
   
   render() {
